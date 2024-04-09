@@ -5163,12 +5163,12 @@ class EnterOptionsGame {
     return $$context$$["apiCategory"];
   }
 
-  set query(Record<String, String> value) {
+  set query(mpjs.JSObject value) {
     $$context$$["query"] = value;
   }
 
-  Record<String, String> get query {
-    return query;
+  mpjs.JSObject get query {
+    return $$context$$["query"];
   }
 
   set referrerInfo(EnterOptionsGameReferrerInfo value) {
@@ -11668,12 +11668,12 @@ class KickoutMemberOption {
 class LaunchOptionsGame {
   late mpjs.JSObject $$context$$;
 
-  set query(Record<String, String> value) {
+  set query(mpjs.JSObject value) {
     $$context$$["query"] = value;
   }
 
-  Record<String, String> get query {
-    return query;
+  mpjs.JSObject get query {
+    return $$context$$["query"];
   }
 
   set referrerInfo(EnterOptionsGameReferrerInfo value) {
@@ -14000,12 +14000,12 @@ class OnShareTimelineListenerResult {
 class OnShowListenerResult {
   late mpjs.JSObject $$context$$;
 
-  set query(Record<String, String> value) {
+  set query(mpjs.JSObject value) {
     $$context$$["query"] = value;
   }
 
-  Record<String, String> get query {
-    return query;
+  mpjs.JSObject get query {
+    return $$context$$["query"];
   }
 
   set referrerInfo(ResultReferrerInfo value) {
@@ -14021,7 +14021,11 @@ class OnShowListenerResult {
   }
 
   num get scene {
-    return $$context$$["scene"];
+    try {
+      return $$context$$["scene"];
+    } catch (e) {
+      return 0;
+    }
   }
 
   set chatType(dynamic value) {
@@ -26625,13 +26629,13 @@ class GameServerManager {
     return result;
   }
 
-  dynamic login() {
-    final result = $$context$$.callMethod('login', []);
+  Future<dynamic> login() {
+    final result = $$context$$.callMethodAwaitPromise('login', []);
     return result;
   }
 
-  dynamic logout() {
-    final result = $$context$$.callMethod('logout', []);
+  Future<dynamic> logout() {
+    final result = $$context$$.callMethodAwaitPromise('logout', []);
     return result;
   }
 

@@ -6410,12 +6410,8 @@ class GameServerManagerOnDisconnectListenerResult {
 class GameServerManagerOnMatchListenerResult {
   late mpjs.JSObject $$context$$;
 
-  set res(OnMatchListenerResult value) {
-    $$context$$["res"] = value.$$context$$;
-  }
-
   OnMatchListenerResult get res {
-    return OnMatchListenerResult($$context$$: $$context$$["res"]);
+    return OnMatchListenerResult($$context$$: $$context$$);
   }
 
   GameServerManagerOnMatchListenerResult({mpjs.JSObject? $$context$$}) {
@@ -6426,12 +6422,8 @@ class GameServerManagerOnMatchListenerResult {
 class GameServerManagerOnRoomInfoChangeListenerResult {
   late mpjs.JSObject $$context$$;
 
-  set res(OnRoomInfoChangeListenerResult value) {
-    $$context$$["res"] = value.$$context$$;
-  }
-
   OnRoomInfoChangeListenerResult get res {
-    return OnRoomInfoChangeListenerResult($$context$$: $$context$$["res"]);
+    return OnRoomInfoChangeListenerResult($$context$$: $$context$$);
   }
 
   GameServerManagerOnRoomInfoChangeListenerResult(
